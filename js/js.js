@@ -1,21 +1,35 @@
-    
-let user = new Object(); // "object constructor" syntax
-user = {};  // "object literal" syntax
+let fibonacci = [0, 1];
+let numero = 0;
 
-   user = {     // an object
-    name: "John",  // by key "name" store value "John"
-    age: 30        // by key "age" store value 30
-  };
+var input = document.getElementById("searchInput"); var valor = input.value; alert("El valor del campo es:"+ valor);
 
-  // get property values of the object:
-alert( user.name ); // John
-alert( user.age ); // 30
+function mostrarSecuenciaDeFibonacci() {
+  for (i = 0; i <= 20; i++) {
+    numero = fibonacci.at(-1) + fibonacci.at(-2);
+    fibonacci.push(numero);
+  }
+}
 
-user = {
-  name: "ales",
-  age: 20
-};  
+mostrarSecuenciaDeFibonacci();
+
+console.log(fibonacci);
 
 
 
-class user 
+
+let text = "";
+let arrayText = [];
+function palindromo(text) {
+    arrayText = text.split("");
+    arrayInvertido = arrayText.reverse();
+
+    // ocupar text y no el arrayText
+    if (arrayInvertido == text) {
+        console.log("es palindromo");
+    } else {
+        console.log("no es palindromo");
+    }
+
+}
+palindromo("tombo");
+palindromo("reconocer");
